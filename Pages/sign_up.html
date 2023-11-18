@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link nes="" rel="icon" sizes="128x128" href="https://www.nike.com/android-icon-128x128.png">
+    <link rel="stylesheet" href="../style/navbar.css">
+    <script src="https://kit.fontawesome.com/683b4b40e3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../anand footer/footer.css">
+    <link rel="stylesheet" href="../style/sign_up.css">
+    <style>
+
+    </style>
+
+</head>
+<body>
+    <!-- navbar suraj -->
+    <div id="navbar_suraj">
+        <div id="top">
+            <div class="left">
+                <svg height="30px" width="30px" fill="#111" viewBox="0 0 26 32">
+                    <img src="../img/logo/jumbman.png" alt="" class="logo">
+                </svg>
+            </div>
+            <div id="right">
+               <p>Help</p>
+                <hr>
+              <p id="join_us_nav_bar">Join Us</p>
+                <hr>
+               <p id="sign_in_nav_bar">Sign In</p>
+                
+            </div>
+             </div> 
+             <div id="bottom">
+                 <div class="left">
+                  <a href="../index.html"><svg class="pre-logo-svg" height="50px" width="20px" fill="#111" viewBox="0 0 69 32">
+                    <img src="../img/logo/Logo_NIKE.png" alt="" class="logo">
+                  </svg></a> 
+                  
+                 </div>
+                 <div id="center_phone">
+                 </div>
+                 <div class="center">
+                  <p id="men_page_nav_bar">Men</p>
+                  <p id="women_page_nav_bar">Women</p>
+                  <p id="kid_page_nav_bar">Kids</p>
+                  <p id="customize_page_nav_bar">Customize</p>
+                  <p id="sale_page_nav_bar">Sale</p>
+                   <p id="snkrs_page_nav_bar">SNKRS</p>
+              </div>
+              <div class="search">
+                  <i id="icon" class="fas fa-search"></i>
+                  <input id="search_input" type="text" placeholder="Search">
+              </div>
+              <div class="right">
+                <a href="wishlist.html"><i id="hearth" class="far fa-heart" style="color: black;"></i></a> 
+                <a href="cart.html"><svg width="10px" height="10px" fill="#111" viewBox="0 0 24 24">
+                    <img src="../img/icon/shopping-bag.png" alt="" class="logo">
+                </svg></a>
+              </div>
+             </div>
+             <div class="text">
+                 
+             </div>
+    </div>
+    
+
+    <div id = "signup_box">
+        <div>
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.iconsdb.com%2Ficons%2Fdownload%2Fblack%2Fnike-512.jpg&f=1&nofb=1" alt="">
+        </div>
+        <h3>BECOME A NIKE MEMBER</h3>
+        <div>
+            <p>Create your Nike Member profile and get first
+                access to the very best of Nike products, inspiration
+                and community.</p>
+        </div>
+        <div class = "form">
+            <form action="" id ="signup_form">
+                <input type="email" id = "email" placeholder="Email address" autofocus  required minlength="5">
+                <input type="password" id = "password" placeholder="Password" required minlength="3">
+                <input type="text" id = "first" placeholder="First Name" required minlength="1">
+                <input type="text" id = "last" placeholder="Last Name" required minlength="1">
+                <input type="text" id = "birth" placeholder="Date of Birth" onfocus="(this.type='date')" required>
+                <label for="">Get Nike Member Reward every year on your Birthday.</label>
+                <input type="text" id="country" value="VietNam">
+                <div class = "gender">
+                    <div id = "male">Male</div>
+                    <div id = "female">Female</div>
+                </div>
+                <div id = "tick_box">
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <p>Sign up fo emails to get updates from Nike on
+                            products,offer and your Member benefits
+                        </p>
+                    </div>
+                    <p>By Creating an account, you agree to Nike's <a href="https://agreementservice.svs.nike.com/rest/agreement?agreementType=privacyPolicy&country=IN&language=en&mobileStatus=false&requestType=redirect&uxId=com.nike.commerce.nikedotcom.web">Privacy Policy</a>
+                        and 
+                        <a href="https://agreementservice.svs.nike.com/rest/agreement?agreementType=termsOfUse&country=IN&language=en&mobileStatus=true&requestType=redirect&uxId=com.nike.commerce.nikedotcom.web">Terms of Use.</a></p>
+                </div>
+                <button id = "join_us">JOIN US</button>
+                <p>Already a Member?<a href="../Pages/sign_in.html">Sign In.</a></p>
+            </form>
+        </div>
+    </div>
+    <div id = "customise_footer"></div>  
+</body>
+</html>
+
+<script src="../script/navbar.js"></script>
+
+<script src="../script/sign_up.js"> </script>
+
+<script type = "module">
+
+import footer from "../anand footer/footer.js"
+
+let footer_styles = footer()
+document.querySelector("#customise_footer").innerHTML = footer_styles  
+
+var men = document.getElementById("men_page_nav_bar").addEventListener("click",Menpage)
+ function Menpage(){
+     window.location.href = "men.html"
+ }
+
+</script>

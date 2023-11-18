@@ -1,0 +1,172 @@
+#men_shoes_container{
+    display: grid;
+    grid-template-columns: repeat(3,30%);
+    grid-gap: 10px;
+    /* border: 1px solid red; */
+    width: 90%;
+    margin-left: 10%;
+    margin-top: 3%;
+    
+}
+#men_shoes_container > div{
+    cursor: pointer;
+    /* border: 1px solid red; */
+    align-items: center;
+}
+#men_shoes_container>div>img{
+    height: 400px;
+}
+body{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#shoes{
+    /* text-decoration: none !important; */
+    all: unset;
+}
+#men_cloth_container{
+    display: grid;
+    grid-template-columns: repeat(3,34%);
+    grid-gap: 10px;
+    /* border: 1px solid red; */
+    width: 85%;
+    height: 85%;
+    margin-left: 3%;
+    margin-top: 3%;
+    
+}
+#men_cloth_container > div{
+    cursor: pointer;
+    /* border: 1px solid red; */
+    align-items: center;
+    /* margin-right: 10%; */
+}
+#men_wishlist_container{
+    display: grid;
+    grid-template-columns: repeat(3,25%);
+    grid-gap: 10px;
+    /* border: 1px solid red; */
+    width: 90%;
+    margin-left: 10%;
+    margin-top: 3%;
+    
+}
+#men_wishlist_container > div{
+    cursor: pointer;
+    /* border: 1px solid red; */
+    align-items: center;
+    height: 100%;
+    margin-right: 10%;
+
+}
+@media screen and (min-width: 0px) and (max-width: 414px) {
+    #men_shoes_container{
+        display: grid;
+        grid-template-columns: repeat(1,100%);
+        grid-gap: 10px;
+        /* border: 1px solid red; */
+        width: 100%;
+        margin-left: 10px;
+        margin-top: 3%;
+        
+    }
+    #men_shoes_container > div{
+        cursor: pointer;
+        /* border: 1px solid red; */
+        align-items: center;
+        margin: 0;
+    }
+    #men_shoes_container>div>img{
+        height: 400px;
+    }
+    body{
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    #shoes{
+        /* text-decoration: none !important; */
+        all: unset;
+    }
+    #men_cloth_container{
+        display: grid;
+        grid-template-columns: repeat(1,100%);
+        grid-gap: 10px;
+        /* border: 1px solid red; */
+        width: 100%;
+        margin-left: 10px;
+        margin-top: 3%;
+        
+    }
+    #men_cloth_container > div{
+        cursor: pointer;
+        /* border: 1px solid red; */
+        align-items: center;
+        margin: 0;
+    }
+    #men_wishlist_container{
+        display: grid;
+        grid-template-columns: repeat(1,100%);
+        grid-gap: 3%;
+        /* border: 1px solid red; */
+        width: 100%;
+        margin-left: 10%;
+        margin-top: 3%;
+        
+    }
+    #men_wishlist_container > div{
+        cursor: pointer;
+        /* border: 1px solid red; */
+        align-items: center;
+        width: 30%;
+    }
+
+}
+
+@media screen and (min-width: 415px) and (max-width: 820px){
+    #men_cloth_container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 10px;
+        /* border: 1px solid red; */
+        width: 100%;
+        margin-left: 20px;
+        margin-top: 3%;
+        
+    }
+    #men_shoes_container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 10px;
+        /* border: 1px solid red; */
+        width: 100%;
+        margin-left: 20px;
+        margin-top: 3%;
+        
+    }
+
+    #men_shoes_container>div>img{
+        height: 350px;
+    }
+
+    #men_shoes_container>div>img{
+        height: 350px;
+    }
+
+    #men_wishlist_container{
+        display: grid;
+        grid-template-columns: repeat(3,25%);
+        grid-gap: 3%;
+        /* border: 1px solid red; */
+        width: 100%;
+        margin-left: 10%;
+        margin-top: 3%;
+        
+    }
+
+
+
+}
+
+.wishlistimg{
+    height: 400px;
+    width: 380px;
+}
+

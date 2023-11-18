@@ -1,0 +1,39 @@
+#feed-header{
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}#feed-header>p{
+    cursor: pointer;
+}
+#feed-header,
+#feed-main {
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#feed-main {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-gap: 20px;
+text-align: center;
+}
+.feeddiv > img {
+width: 100%;
+}
+.feeddiv>p:nth-child(3){
+  font-size: x-large;
+}
+.comingsoonbutton{
+  border: none;
+  height: 5%;
+  width: 28%;
+  border-radius: 15px;
+  cursor: pointer;
+  display: none;
+}
+#instock-main{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-gap: 20px;
+}
+.stockdiv>img{
+  width: 100%;
+}

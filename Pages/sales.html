@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales</title>
+    <link nes="" rel="icon" sizes="128x128" href="https://www.nike.com/android-icon-128x128.png">
+    <link rel="stylesheet" href="../style/navbar.css">
+    <script src="https://kit.fontawesome.com/683b4b40e3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../anand footer/footer.css">
+    <link rel="stylesheet" href="../style/sales.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <!-- navbar suraj -->
+    <div id="navbar_suraj">
+        <div id="top">
+            <div class="left">
+                <svg height="30px" width="30px" fill="#111" viewBox="0 0 26 32">
+                    <img src="../img/logo/jumbman.png" alt="" class="logo">
+                </svg>
+            </div>
+            <div id="right">
+               <p>Help</p>
+                <hr>
+              <p id="join_us_nav_bar">Join Us</p>
+                <hr>
+               <p id="sign_in_nav_bar">Sign In</p>
+                
+            </div>
+             </div> 
+             <div id="bottom">
+                 <div class="left">
+                  <a href="../index.html"><svg class="pre-logo-svg" height="50px" width="20px" fill="#111" viewBox="0 0 69 32">
+                    <img src="../img/logo/Logo_NIKE.png" alt="" class="logo">
+                  </svg></a> 
+                  
+                 </div>
+                 <div id="center_phone">
+                 </div>
+                 <div class="center">
+                  <p id="men_page_nav_bar">Men</p>
+                  <p id="women_page_nav_bar">Women</p>
+                  <p id="kid_page_nav_bar">Kids</p>
+                  <p id="customize_page_nav_bar">Customize</p>
+                  <p id="sale_page_nav_bar">Sale</p>
+                   <p id="snkrs_page_nav_bar">SNKRS</p>
+              </div>
+              <div class="search">
+                  <i id="icon" class="fas fa-search"></i>
+                  <input id="search_input" type="text" placeholder="Search">
+              </div>
+              <div class="right">
+                <a href="wishlist.html"><i id="hearth" class="far fa-heart" style="color: black;"></i></a> 
+                <a href="cart.html"><svg width="10px" height="10px" fill="#111" viewBox="0 0 24 24">
+                    <img src="../img/icon/shopping-bag.png" alt="" class="logo">
+                </svg></a>
+              </div>
+             </div>
+             <div class="text">
+                 
+             </div>
+    </div>
+
+        <div id = "sale_topbar">
+            <div>
+                <p id = "sale_head"> Sale</p>
+            </div>
+            <div id = "sale_filter_sort"> 
+              <div id = "filter_sec">
+                <p>Show Filters</p>
+                    <img id = "filter" src="https://cdn.iconscout.com/icon/free/png-64/filter-3583346-3007732.png" alt="">
+              </div>
+            
+                <p id = "sort_by">Sort By:
+                <div id = "sort_arrow">&#x276D;</div>
+                </p>
+          </div>
+        </div>
+        <div id = "sale_sorting_list"></div>
+        <div>
+            <div id = "filter_corner"></div>
+            <div id = "sale_products"></div>
+        </div>
+        <div id = "customise_footer"></div>
+</body>
+</html>
+
+<script src="../script/navbar.js"></script>
+
+<script type ="module">
+
+    let products = JSON.parse(localStorage.getItem("sales_products"))||[]; // getting data from local Storage
+
+    // IMPORT FUNCTION
+    import {getdata,filter_cat} from '../script/sales.js'
+    import setdata from '../script/nike_sale_data.js' 
+
+    setdata() // calling setdata to store the details to the local storage 
+
+   let product =  document.querySelector('#sale_products') // gettin element from HTML
+
+    getdata(products,product) // adding parameter to imported funtion get data(data,location)
+
+    sort_price() // calling sort_price to open sort section
+
+// ------------------------------------------------SORT SECTION STARTS ------------------------------------- //
+    function sort_price()
+    {   
+        document.querySelector("#sort_arrow").addEventListener("click",() => // event listner
+        {
+            event.target.style.transform = "translate(-7px,25px) rotate(270deg)" // making arrow upwards
+
+            document.querySelector("#sale_sorting_list").innerHTML = ""; 
+            let low = document.createElement("h6")
+            low.textContent = "Price: Low to High";
+            let high = document.createElement("h6")
+            high.textContent = "Price: High to Low";
+            
+            document.querySelector("#sale_sorting_list").append(low,high) // appending to the Sort List
+            
+            document.querySelector("#sale_sorting_list").style.cssText =  // styles to sort body
+            `background:white;
+            width:130px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);`;
+        
+
+            document.querySelector("#sale_sorting_list").addEventListener("click",() => // event listner to sort body
+            {
+                
+                products.sort(function(a,b){ //  sort funtion upon clicking 
+                    
+                    if(event.target.textContent == low.textContent) // if clicked low to high text
+                    {
+                        return Number(a.price) - Number(b.price) 
+            
+                    }
+                    else if(event.target.textContent == high.textContent) // if clicked on high to low
+                    { 
+                        let num = Number(a.price)
+                        return Number(b.price) - Number(a.price)
+                    }
+                })
+                getdata(products,product) // adding sorted data as parameter 
+
+            })
+
+            document.querySelector("#sort_arrow").addEventListener("click",() => // make arrow downwards upon clicking second time
+            {
+                event.target.style.transform = "translateY(30px) rotate(90deg)"; // changing arrow direction
+                document.querySelector("#sale_sorting_list").style.display = "none"; // not displaying upon second click
+                sort_price() //  calling again the function so returns to normal
+            })
+        })
+    } 
+// --------------------------------------- FILTER SECTION -----------------------------------------------------//
+
+    filter_it() // calling function
+
+    function filter_it() //FILTER SECTION
+    {
+        document.querySelector("#filter").addEventListener("click",() => // if clicked on "SHOW FILTERS" image
+        {
+            document.querySelector("#filter_sec > p").textContent = "Hide Filters"; // Changes to Hide filters
+            document.querySelector("#sale_products").style.width = "80%" // Products box size reduced
+
+            let filter_box = document.querySelector("#filter_corner") // Calling filter box element
+
+            filter_box.style.cssText =  // Giving styles here so that only shows if clicked on filter
+            `width:15%;
+            margin-left:1%;
+            position:sticky;
+            top:73px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            height:290px;
+            text-align:center;`;
+            
+            let category = document.createElement("h4")  // creating to put heading
+            category.textContent = "Categories";  // Adding categories heading
+
+            let categories = document.createElement("div") // a BOX of contents (buttons and filter categories)
+        
+            filter_box.append(category) // appending it filter box  114 line
+
+            filter_cat(products,filter_box,categories,"Men") // Adding categaries Men,Women,Kids,Shirts,Shoes
+            filter_cat(products,filter_box,categories,"Women")
+            filter_cat(products,filter_box,categories,"Kids")
+            filter_cat(products,filter_box,categories,"Shoes")
+            filter_cat(products,filter_box,categories,"Shirts")
+
+            document.querySelector("#filter").addEventListener("click",() => // If clicked on filter again to close the filters
+            {
+                document.querySelector("#filter_sec > p").textContent = "Show Filters"; // Changed to Show filters
+                filter_box.style.display = "none"; // closes the filter box
+                document.querySelector("#sale_products").style.width = "96%"; // product box to normal
+                filter_box.innerHTML = ""; // Making filter box empty so to control multiple filter box upon clicking multiple styles
+                filter_it() // Calling again to make sure, can click any times on filter without refresh,
+                // if removed or comment this , upon closing(2nd click), have to refresh to click again, TRY IT.
+            })
+        })
+    }  
+////// -------------------------------------------------------////////////////////--------------------
+    // FOOTER Section
+    
+    import footer from "../anand footer/footer.js"
+
+    let footer_styles = footer()
+    document.querySelector("#customise_footer").innerHTML = footer_styles
+
+
+
+    var men = document.getElementById("men_page_nav_bar").addEventListener("click",Menpage)
+ function Menpage(){
+     window.location.href = "men.html"
+ }
+
+</script>

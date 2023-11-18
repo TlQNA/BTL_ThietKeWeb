@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customise</title>
+    <link nes="" rel="icon" sizes="128x128" href="https://www.nike.com/android-icon-128x128.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/navbar.css">
+    <link rel="stylesheet" href="../style/customize.css">
+    <link rel="stylesheet" href="../anand footer/footer.css">
+    <script src="https://kit.fontawesome.com/683b4b40e3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- navbar suraj -->
+    <div id="navbar_suraj">
+        <div id="top">
+            <div class="left">
+                <svg height="30px" width="30px" fill="#111" viewBox="0 0 26 32">
+                    <img src="../img/logo/jumbman.png" alt="" class="logo">
+                </svg>
+            </div>
+            <div id="right">
+               <p>Help</p>
+                <hr>
+              <p id="join_us_nav_bar">Join Us</p>
+                <hr>
+               <p id="sign_in_nav_bar">Sign In</p>
+                
+            </div>
+             </div> 
+             <div id="bottom">
+                 <div class="left">
+                  <a href="../index.html"><svg class="pre-logo-svg" height="50px" width="20px" fill="#111" viewBox="0 0 69 32">
+                    <img src="../img/logo/Logo_NIKE.png" alt="" class="logo">
+                  </svg></a> 
+                  
+                 </div>
+                 <div id="center_phone">
+                 </div>
+                 <div class="center">
+                  <p id="men_page_nav_bar">Men</p>
+                  <p id="women_page_nav_bar">Women</p>
+                  <p id="kid_page_nav_bar">Kids</p>
+                  <p id="customize_page_nav_bar">Customize</p>
+                  <p id="sale_page_nav_bar">Sale</p>
+                   <p id="snkrs_page_nav_bar">SNKRS</p>
+              </div>
+              <div class="search">
+                  <i id="icon" class="fas fa-search"></i>
+                  <input id="search_input" type="text" placeholder="Search">
+              </div>
+              <div class="right">
+                <a href="wishlist.html"><i id="hearth" class="far fa-heart" style="color: black;"></i></a> 
+                <a href="cart.html"><svg width="10px" height="10px" fill="#111" viewBox="0 0 24 24">
+                    <img src="../img/icon/shopping-bag.png" alt="" class="logo">
+                </svg></a>
+              </div>
+             </div>
+             <div class="text">
+                 
+             </div>
+    </div>
+
+    <div id = "customize_image">
+        <p>Nike By You</p>
+        <img src="../img/NikeByYou_Explainer_15.gif" alt="">
+    </div>
+    <div id = "customize_content">
+        <h1>ADD YOUR MAGIC TOUCH</h1>
+        <h1>YOUR SHOE</h1>
+        <p>When all that inspiration goes into your shoe design, anything feels possible. Voilà! Try your hand at making that so-you shoe with Nike’s co-creation service.
+        </p>
+
+        <button>Customise</button>
+    </div>
+
+    <div id = "customise_footer"></div>
+</body>
+</html>
+
+<script src="../script/navbar.js"></script>
+
+<script type = "module">
+    import footer from "../anand footer/footer.js"
+
+    let footer_styles = footer()
+    document.querySelector("#customise_footer").innerHTML = footer_styles
+</script>

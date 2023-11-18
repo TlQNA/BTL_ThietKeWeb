@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership</title>
+    <link nes="" rel="icon" sizes="128x128" href="https://www.nike.com/android-icon-128x128.png">
+    <link rel="stylesheet" href="../style/navbar.css">
+    <link rel="stylesheet" href="../anand footer/footer.css">
+    <link rel="stylesheet" href="../style/join_us.css">
+     <script src="https://kit.fontawesome.com/683b4b40e3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- navbar suraj -->
+    <div id="navbar_suraj">
+        <div id="top">
+            <div class="left">
+                <svg height="30px" width="30px" fill="#111" viewBox="0 0 26 32">
+                    <img src="../img/logo/jumbman.png" alt="" class="logo">
+                </svg>
+            </div>
+            <div id="right">
+               <p>Help</p>
+                <hr>
+              <p id="join_us_nav_bar">Join Us</p>
+                <hr>
+               <p id="sign_in_nav_bar">Sign In</p>
+                
+            </div>
+             </div> 
+             <div id="bottom">
+                 <div class="left">
+                  <a href="../index.html"><svg class="pre-logo-svg" height="50px" width="20px" fill="#111" viewBox="0 0 69 32">
+                    <img src="../img/logo/Logo_NIKE.png" alt="" class="logo">
+                  </svg></a> 
+                  
+                 </div>
+                 <div id="center_phone">
+                 </div>
+                 <div class="center">
+                  <p id="men_page_nav_bar">Men</p>
+                  <p id="women_page_nav_bar">Women</p>
+                  <p id="kid_page_nav_bar">Kids</p>
+                  <p id="customize_page_nav_bar">Customize</p>
+                  <p id="sale_page_nav_bar">Sale</p>
+                   <p id="snkrs_page_nav_bar">SNKRS</p>
+              </div>
+              <div class="search">
+                  <i id="icon" class="fas fa-search"></i>
+                  <input id="search_input" type="text" placeholder="Search">
+              </div>
+              <div class="right">
+                <a href="wishlist.html"><i id="hearth" class="far fa-heart" style="color: black;"></i></a> 
+                <a href="cart.html"><svg width="10px" height="10px" fill="#111" viewBox="0 0 24 24">
+                    <img src="../img/icon/shopping-bag.png" alt="" class="logo">
+                </svg></a>
+              </div>
+             </div>
+             <div class="text">
+                 
+             </div>
+    </div>
+
+    <!-- Main join us page content -->
+    <div id = "membership">
+        <p>Nike Membership</p>
+    </div>
+    <div id = "join_us">
+        <img src="https://i2.paste.pics/4812ed74a9a53f53b83c4e930f925917.png?trs=2218877daff98d7db84b885b54f3c3afd8bd8e45259e7205630d3234042c601f" alt="">
+    </div>
+    <div id = "join_us_content">
+        <div>Where All Athletes Belong</div>
+        <p>Trying something new is never pretty. But it is pretty awesome.
+            Because no matter how many times you fall down, you're still coming out
+            on top. Trying new things is always a win.
+        </p>
+        <p>
+            Join the Nike community as we Play New. As a Member, you'll
+            have access to inspiration, the latest Nike products and a community
+            of people who are trying something new, just like you.
+        </p>
+        <div id = "join_in">
+            <button class = "join_us_click">Join Us</button>
+            <button class = "sign_in_click">Sign In</button>
+        </div>
+    </div>
+
+    <div class = "nike_image">
+        <p>Don't Miss</p>
+        <img src="../img/logo/image.jpg" alt="">
+    </div>
+    <div id = "hello_app_content">
+        <h1>YOUR NIKE CONNECTION</h1>
+        <P>More sport, more inspiration, more Nike!</P>
+        <button>Get Your Great</button>
+    </div>
+    <div class="nike_image">
+        <p>Frequently Asked Questions</p>
+        <br>
+        <p>What is Nike Membership?</p>
+        <p style="color: slategray;">Nike Membership gives you access to inspiration, community and exclusive Nike products. It's the best way to access everything Nike, and it's free, fast and easy to join. You can join online or when you download any of the Nike apps.</p>
+        <br>
+        <p>Is Nike Membership free?</p>
+        <p style="color: slategray;">Yes, Nike Membership is free. That includes our fitness apps, Nike Training Club and Nike Run Club, and their libraries of over 100 workouts, and the SNKRS App, to stay on top of the latest sneaker drops.</p>
+        <br>
+        <p>How fast is sign-up?</p>
+        <p style="color: slategray;">Join Us with three simple clicks, and you'll be ready to shop, work out and enjoy all of our benefits.</p>
+        <br>    
+        <p>What are Member Rewards?</p>
+        <p style="color: slategray;">All Nike Members receive special offers and product promotions just to say thanks for being with us, or for moments of personal significance like birthdays. Nike Member Rewards is not a points-based system, so you'll receive rewards throughout the year.</p>
+    </div>
+    <div id = "athletes">
+        <img src="../img/logo/nike-membership.png" alt="" id="athletes-img">
+        <div >
+            <button class = "join_us_click" >Join Us</button>
+            <button class = "sign_in_click" >Sign-In</button>
+        </div>
+    </div>
+    <div id = "customise_footer"></div>  
+</body>
+</html>
+
+<script src="../script/navbar.js"></script>
+
+<script type = "module">
+
+    import footer from "../anand footer/footer.js"
+
+    let footer_styles = footer()
+    document.querySelector("#customise_footer").innerHTML = footer_styles
+
+
+    document.querySelectorAll(".join_us_click")[0].addEventListener("click",() =>
+    {
+        window.location.href = "../Pages/sign_up.html"
+    })
+    document.querySelectorAll(".sign_in_click")[0].addEventListener("click",() =>
+    {
+        window.location.href = "../Pages/sign_in.html"
+    })
+    document.querySelectorAll(".join_us_click")[1].addEventListener("click",() =>
+    {
+        window.location.href = "../Pages/sign_up.html"
+    })
+    document.querySelectorAll(".sign_in_click")[1].addEventListener("click",() =>
+    {
+        window.location.href = "../Pages/sign_in.html"
+    })
+
+
+
+
+    var men = document.getElementById("men_page_nav_bar").addEventListener("click",Menpage)
+ function Menpage(){
+     window.location.href = "men.html"
+ }
+
+</script>

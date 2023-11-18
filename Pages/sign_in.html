@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link nes="" rel="icon" sizes="128x128" href="https://www.nike.com/android-icon-128x128.png">
+    <link rel="stylesheet" href="../style/navbar.css">
+    <script src="https://kit.fontawesome.com/683b4b40e3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../anand footer/footer.css">
+    <link rel="stylesheet" href="../style/sign_in.css">
+
+    <style>
+
+    </style>
+</head>
+<body>
+    <!-- navbar suraj -->
+    <div id="navbar_suraj">
+        <div id="top">
+            <div class="left">
+                <svg height="30px" width="30px" fill="#111" viewBox="0 0 26 32">
+                    <img src="../img/logo/jumbman.png" alt="" class="logo">
+                </svg>
+            </div>
+            <div id="right">
+               <p>Help</p>
+                <hr>
+              <p id="join_us_nav_bar">Join Us</p>
+                <hr>
+               <p id="sign_in_nav_bar">Sign In</p>
+                
+            </div>
+             </div> 
+             <div id="bottom">
+                 <div class="left">
+                  <a href="../index.html"><svg class="pre-logo-svg" height="50px" width="20px" fill="#111" viewBox="0 0 69 32">
+                    <img src="../img/logo/Logo_NIKE.png" alt="" class="logo">
+                  </svg></a> 
+                  
+                 </div>
+                 <div id="center_phone">
+                 </div>
+                 <div class="center">
+                  <p id="men_page_nav_bar">Men</p>
+                  <p id="women_page_nav_bar">Women</p>
+                  <p id="kid_page_nav_bar">Kids</p>
+                  <p id="customize_page_nav_bar">Customize</p>
+                  <p id="sale_page_nav_bar">Sale</p>
+                   <p id="snkrs_page_nav_bar">SNKRS</p>
+              </div>
+              <div class="search">
+                  <i id="icon" class="fas fa-search"></i>
+                  <input id="search_input" type="text" placeholder="Search">
+              </div>
+              <div class="right">
+                <a href="wishlist.html"><i id="hearth" class="far fa-heart" style="color: black;"></i></a> 
+                <a href="cart.html"><svg width="10px" height="10px" fill="#111" viewBox="0 0 24 24">
+                    <img src="../img/icon/shopping-bag.png" alt="" class="logo">
+                </svg></a>
+              </div>
+             </div>
+             <div class="text">
+                 
+             </div>
+    </div>
+    
+    <div id = "login_box">
+        <div>
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.iconsdb.com%2Ficons%2Fdownload%2Fblack%2Fnike-512.jpg&f=1&nofb=1" alt="">
+        </div>
+        <h3>YOUR ACCOUNT FOR EVERYTHING NIKE</h3>
+        <div id = "login_form">
+            <input type="email" id = "email" placeholder="Email address">
+            <input type="password" id = "password" placeholder="Password">
+        </div>
+        <div id = "tick_box">
+            <input type="checkbox" name="" id="">
+            <p>Keep me signed in</p>
+        </div>
+        <div id = "nike_terms">
+            <p>By logging in, you agree to Nike's <a href="https://agreementservice.svs.nike.com/rest/agreement?agreementType=privacyPolicy&country=IN&language=en&mobileStatus=false&requestType=redirect&uxId=com.nike.commerce.nikedotcom.web">Privacy Policy</a>
+                and 
+                <a href="https://agreementservice.svs.nike.com/rest/agreement?agreementType=termsOfUse&country=IN&language=en&mobileStatus=true&requestType=redirect&uxId=com.nike.commerce.nikedotcom.web">Terms of Use.</a></p>
+        </div>
+        <button id = "sign_in">SIGN IN</button>
+        <p>Not a Member?<a href="../Pages/sign_up.html">Join us.</a></p>
+    </div>
+    <div id = "customise_footer"></div>  
+</body>
+</html>
+
+<script src="../script/navbar.js"></script>
+
+<script type = "module">
+// Adding footer htmls 
+    import footer from "../anand footer/footer.js"
+
+    let footer_styles = footer()
+    document.querySelector("#customise_footer").innerHTML = footer_styles
+/////////////////////////------------------------------------------------///////////////////
+
+    let reg_data = JSON.parse(localStorage.getItem("reg_data")) // getting registration data from local storage
+
+    document.querySelector("#sign_in").addEventListener("click",() => // if clicked on Sign in button
+    {
+        let email = document.querySelector("#email").value // getting entered email 
+        let password = document.querySelector("#password").value // getting entered password
+
+        if(email == reg_data.email && password == reg_data.password) // checking if matches
+        {
+            alert("Login Successfull") // if matches alert message and next page
+            window.location.href = "../index.html";
+        }
+        else
+        {
+            alert("Incorrect Email or Password") // else alert to re enter 
+        }
+    })
+
+
+
+    var men = document.getElementById("men_page_nav_bar").addEventListener("click",Menpage)
+ function Menpage(){
+     window.location.href = "men.html"
+ }
+
+</script>

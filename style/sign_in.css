@@ -1,0 +1,117 @@
+#login_box {
+  box-shadow: 0 1.6px 3.6px 0 rgb(0 0 0 / 13%), 0 0.3px 0.9px 0 rgb(0 0 0 / 11%);
+  font-family: Arial, Helvetica, sans-serif;
+  width: 25%;
+  margin: 8% auto 5%;
+  text-align: center;
+}
+
+#login_box > div:first-child {
+  margin: auto;
+  width: 50px;
+  height: 40px;
+  border: 1px solid rgb(252, 252, 252);
+}
+
+#login_box > div > img {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+#login_box > h3 {
+  font-size: 20px;
+}
+
+#login_form {
+  margin-top: 8%;
+}
+
+#login_form > input {
+  width: 93%;
+  height: 35px;
+  margin: 2% 0;
+  border: 1px solid rgb(224, 220, 220);
+  padding-left: 15px;
+  color: rgb(117, 117, 117);
+}
+
+#login_form > input:focus {
+  outline: none;
+  border: 2px solid rgb(245, 30, 30);
+}
+
+#tick_box {
+  display: flex;
+  height: 45px;
+  width: 94%;
+  text-align: start;
+  margin-top: 4%;
+}
+
+#tick_box > input {
+  width: 30px;
+  height: 20px;
+  margin-right: 3%;
+  margin-left: 1%;
+}
+
+#tick_box > p {
+  font-size: 12px;
+  line-height: 13px;
+  transform: translateY(-4px);
+  color: rgb(117, 117, 117);
+}
+
+#tick_box > p {
+  color: rgb(117, 117, 117);
+}
+
+#nike_terms {
+  margin: auto;
+  width: 90%;
+  font-size: 12px;
+  line-height: 18px;
+  transform: translateY(-15px);
+  color: rgb(117, 117, 117);
+}
+
+#nike_terms > p > a {
+  color: rgb(117, 117, 117);
+}
+
+#sign_in {
+  width: 98%;
+  height: 40px;
+  background: black;
+  color: white;
+  margin-bottom: 2%;
+  font-family: sans;
+  font-weight: bolder;
+  font-size: 12px;
+  letter-spacing: -0.5px;
+  border: none;
+  border-radius: 5px;
+}
+
+#sign_in + p {
+  font-size: 12px;
+  color: rgb(117, 117, 117);
+}
+
+#sign_in + p > a {
+  color: black;
+}
+
+@media only screen and (min-width: 415px) and (max-width: 820px) {
+  #login_box {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  #login_box {
+    width: 60%;
+    margin-bottom: 35%;
+  }
+}

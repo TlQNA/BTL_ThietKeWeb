@@ -1,0 +1,277 @@
+#customise_footer {
+  height: 290px;
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+#customise_footer > div:first-child {
+  cursor: pointer;
+  display: flex;
+  width: 96%;
+  transform: translate(30px, 20px);
+  border-bottom: 1px solid rgb(54, 53, 53);
+  height: 190px;
+}
+
+#footer_first > div:first-child {
+  width: 17%;
+  line-height: 6px;
+  font-size: 13px;
+}
+
+#footer_get_help,
+#footer_about {
+  width: 19%;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+#footer_get_help > p,
+#footer_about > p {
+  color: grey;
+}
+
+#footer_get_help > p:hover,
+#footer_about > p:hover {
+  color: white;
+}
+
+#customise_footer_icon {
+  width: 16%;
+  height: 50px;
+  margin-left: 25%;
+  transform: translateX(60px);
+  display: flex;
+}
+
+#customise_footer_icon > a {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0 4%;
+  background-color: rgb(119, 118, 118);
+}
+#customise_footer_icon > a :hover {
+  background-color: white;
+}
+
+#customise_footer_icon > a > img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+#footer_lastline {
+  width: 94%;
+  margin: 2% 2% 0;
+  display: flex;
+  justify-content: space-between;
+  height: 38px;
+}
+
+#footer_location {
+  width: 40%;
+  height: 38px;
+  display: flex;
+}
+
+#footer_location div > img {
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+}
+
+#footer_location > p {
+  font-size: 10px;
+  width: 270px;
+  color: grey;
+}
+
+#footer_location > p > b {
+  margin-right: 8%;
+  color: white;
+}
+
+#footer_terms {
+  width: 35%;
+  display: flex;
+  font-size: 12px;
+  justify-content: space-around;
+}
+
+#footer_terms > a {
+  text-decoration: none;
+  color: grey;
+}
+
+#footer_terms > a > p:hover {
+  color: white;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 415px) and (max-width: 820px) {
+  #customise_footer {
+    height: 380px;
+  }
+
+  #customise_footer > div:first-child {
+    width: 98%;
+    transform: translate(20px, 20px);
+    height: 280px;
+  }
+
+  #footer_first > div:first-child {
+    width: 25%;
+    line-height: 6px;
+    font-size: 17px;
+  }
+
+  #footer_get_help,
+  #footer_about {
+    width: 28%;
+    font-size: 13px;
+    line-height: 15px;
+  }
+
+  #customise_footer_icon {
+    width: 23%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100px;
+    margin-left: 2%;
+    margin-right: 2%;
+    justify-content: end;
+    transform: translateX(0);
+  }
+
+  #customise_footer_icon > a {
+    width: 35px;
+    height: 35px;
+  }
+
+  #footer_lastline {
+    width: 96%;
+    justify-content: space-between;
+    height: 70px;
+  }
+
+  #footer_location {
+    margin-top: 4%;
+    width: 50%;
+  }
+
+  #footer_location > p {
+    font-size: 11px;
+    width: 270px;
+    color: grey;
+    margin: 4% 2% 0%;
+  }
+
+  #footer_terms {
+    width: 44%;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 13px;
+    justify-content: start;
+    margin-top: 1%;
+  }
+  #footer_terms > a {
+    margin-right: 6%;
+  }
+
+  #footer_terms > a > p {
+    margin-right: 0%;
+    line-height: 2px;
+    letter-spacing: 1px;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 414px) {
+  #customise_footer {
+    height: 750px;
+  }
+
+  #customise_footer > div:first-child {
+    display: block;
+    width: 96%;
+    transform: translate(20px, 20px);
+    border: none;
+    height: 190px;
+  }
+
+  #footer_first > div:first-child {
+    width: 98%;
+    line-height: 8px;
+    border-bottom: 1px solid grey;
+  }
+
+  #footer_get_help,
+  #footer_about {
+    width: 90%;
+    font-size: 10px;
+    line-height: 16px;
+    border-bottom: 1px solid grey;
+  }
+
+  #customise_footer_icon {
+    width: 90%;
+    height: 40px;
+    margin-top: 3%;
+    margin-left: -1%;
+    transform: translateX(0);
+  }
+
+  #customise_footer_icon > a {
+    margin: 0 5% 0 0;
+    border: none;
+  }
+  #customise_footer_icon > a > img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+  }
+
+  #footer_lastline {
+    width: 98%;
+    margin: 0;
+    transform: translateY(380px);
+    display: block;
+    justify-content: none;
+    height: 198px;
+  }
+
+  #footer_location {
+    width: 90%;
+    height: 38px;
+    display: block;
+  }
+
+  #footer_location div > img {
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+  }
+
+  #footer_location > p {
+    font-size: 13px;
+    width: 90%;
+    color: grey;
+  }
+
+  #footer_location > p > b {
+    margin-right: 8%;
+    color: white;
+  }
+
+  #footer_terms {
+    width: 90%;
+    display: block;
+    color: grey;
+    font-size: 12px;
+    justify-content: none;
+  }
+}
