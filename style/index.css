@@ -1,6 +1,5 @@
 /* Anand */
 
-
 #tara_image,
 #alexa {
  width: 90%;
@@ -446,7 +445,6 @@
   #white-but{
     height: 40px;
     width: 90px;
-    background-color: white;
     color: black;
     display: block;
     border: none;
